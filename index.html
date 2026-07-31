@@ -1,159 +1,274 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio - Farhan Fadhillah</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- FontAwesome CDN untuk Ikon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- 1. ANNOUNCEMENT BAR -->
+  <!-- Top Announcement Bar khas MagangHub -->
   <div class="announcement-bar">
-    <i class="fa-solid fa-bullhorn"></i> Portofolio Digital - Terintegrasi Sistem MagangHub
+    <span><i class="fa-solid fa-bullhorn"></i> Portofolio Digital Resmi &bull; Data Analyst & Machine Learning Practitioner</span>
   </div>
 
-  <!-- 2. NAVBAR CLEAN (STICKY NAVBAR) -->
-  <nav class="navbar">
+  <!-- Header / Navbar Clean -->
+  <header class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <span class="logo-main">Magang</span><span class="logo-sub">Hub</span>
+        <span class="logo-main">Portofolio</span><span class="logo-sub"></span>
       </div>
-      <div class="nav-menu">
-        <a href="#bio" class="active">Beranda</a>
-        <a href="#proyek">Portofolio</a>
-        <a href="#kontak">Kontak</a>
-      </div>
+      <nav class="nav-menu">
+        <a href="#about">Profil & Pendidikan</a>
+        <a href="#projects" class="active">Proyek & Pengalaman</a>
+        <a href="#contact">Kontak</a>
+      </nav>
       <div class="nav-user">
-        <img src="foto-profil.png" alt="Farhan Fadhillah" class="avatar-small">
-        <span class="user-name">Farhan F.</span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- 3. PROFILE BANNER HERO -->
-  <header class="profile-banner">
-    <div class="banner-container">
-      <div class="profile-avatar-wrapper">
-        <img src="foto-profil.png" alt="Farhan Fadhillah" class="profile-avatar">
-      </div>
-      <div class="profile-info">
-        <h1>Farhan Fadhillah</h1>
-        <p class="profile-email"><i class="fa-solid fa-envelope"></i> farhanfadhillah914@gmail.com</p>
-        <p class="profile-location"><i class="fa-solid fa-location-dot"></i> Karawang, Jawa Barat, Indonesia</p>
-      </div>
-      <div class="profile-action">
-        <a href="https://www.linkedin.com" target="_blank" class="btn-edit">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
+        <img src="4x6new.jpg" alt="User Profile" class="avatar-small">
+        <span class="user-name">Farhan Fadhillah</span>
       </div>
     </div>
   </header>
 
-  <!-- 4. MAIN CONTAINER -->
+  <!-- Banner Hero Profil Biru -->
+  <section class="profile-banner">
+    <div class="banner-container">
+      <div class="profile-avatar-wrapper">
+        <img src="4x6new.jpg" alt="Foto Profil" class="profile-avatar" />
+      </div>
+      <div class="profile-info">
+        <h1>FARHAN FADHILLAH</h1>
+        <p class="profile-email"><i class="fa-solid fa-envelope"></i> farhanfarhan6513@gmail.com</p>
+        <p class="profile-location"><i class="fa-solid fa-location-dot"></i> Karawang, Jawa Barat, Indonesia</p>
+      </div>
+      <div class="profile-action">
+        <a href="https://www.linkedin.com/in/farhan-fadhillah-bbb202268?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="btn-edit btn-linkedin">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=farhanfarhan6513@gmail.com" target="_blank" class="btn-edit">
+          <i class="fa-solid fa-paper-plane"></i> Hubungi Saya
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub Navigation Tabs -->
+  <div class="sub-nav-tabs">
+    <div class="tabs-container">
+      <a href="#about" class="tab-item"><i class="fa-regular fa-id-card"></i> Profil & Pendidikan</a>
+      <a href="#projects" class="tab-item active"><i class="fa-solid fa-clock-rotate-left"></i> Riwayat Proyek & Kegiatan</a>
+      <a href="#contact" class="tab-item"><i class="fa-regular fa-comment"></i> Kontak</a>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
   <main class="main-container">
 
-    <!-- RINGKASAN PROFIL -->
-    <section id="bio" class="info-card-box">
-      <div class="box-header">
-        <h3><i class="fa-solid fa-user-check"></i> Ringkasan Profil</h3>
-      </div>
-      <div class="box-body">
-        <p class="bio-text">
-          Mahasiswa Informatika di Universitas Buana Perjuangan Karawang yang berfokus pada bidang Data Analysis, Data Visualization, dan Computer Vision. Memiliki pengalaman praktis dalam mengolah data serta membangun visualisasi interaktif menggunakan Power BI dan Microsoft Excel. Selain itu, berpengalaman dalam menangani data administrasi Work In Process (WIP) serta aktif mengembangkan proyek Computer Vision berbasis deep learning.
-        </p>
-      </div>
-    </section>
-
-    <!-- PENDIDIKAN & PENGALAMAN -->
-    <section id="pendidikan" class="info-card-box">
-      <div class="box-header">
-        <h3><i class="fa-solid fa-graduation-cap"></i> Riwayat Pendidikan & Pengalaman</h3>
-      </div>
-      <div class="box-body">
-        <div class="timeline-list">
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa-solid fa-university"></i>
-            </div>
-            <div class="timeline-content">
-              <span class="edu-level">S1 INFORMATIKA</span>
-              <h4>Universitas Buana Perjuangan Karawang</h4>
-              <p class="edu-detail">2022 - Sekarang (Estimasi Lulus 2026)</p>
-              <span class="gpa-badge">IPK: 3.70 / 4.00</span>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa-solid fa-briefcase"></i>
-            </div>
-            <div class="timeline-content">
-              <span class="edu-level">PENGALAMAN KERJA / PKL</span>
-              <h4>Work In Process (WIP) Administrative Assistant</h4>
-              <p class="edu-detail">Praktik Kerja Lapangan (PKL) • Pengelolaan & Revaluasi Data WIP</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa-solid fa-school"></i>
-            </div>
-            <div class="timeline-content">
-              <span class="edu-level">SMK / VOCATIONAL HIGH SCHOOL</span>
-              <h4>Lulusan Sekolah Menengah Kejuruan</h4>
-              <p class="edu-detail">Lulus Tahun 2022</p>
-            </div>
-          </div>
-
+    <!-- Section 1: Profil Ringkas & Pendidikan -->
+    <section id="about" class="about-section">
+      
+      <!-- Box Profil Ringkas -->
+      <div class="info-card-box">
+        <div class="box-header">
+          <h3><i class="fa-solid fa-user-gear"></i> Profil Ringkas</h3>
+        </div>
+        <div class="box-body">
+          <p class="bio-text">
+            Saya Farhan Fadhillah seorang lulusan Informatika dari Universitas Buana Perjuangan Karawang dengan fokus pada analisis data, pemodelan Machine Learning, dan Computer Vision. Portofolio web ini merangkum perjalanan akademik, keterlibatan aktif dalam komunitas belajar (Techno Club), pengalaman operasional & administrasi di PT Toyota Motor Manufacturing Indonesia, serta berbagai riset berbasis data yang telah saya selesaikan—seperti analisis beban kerja, visualisasi interaktif Power BI, hingga deteksi objek berbasis Deep Learning.
+          </p>
+          <p class="bio-text" style="margin-top: 10px;">
+          </p>
         </div>
       </div>
+
+      <!-- Box Riwayat Pendidikan -->
+      <div class="info-card-box">
+        <div class="box-header">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Riwayat Pendidikan</h3>
+        </div>
+        <div class="box-body">
+          <div class="timeline-list">
+
+            <!-- Pendidikan 1: Perguruan Tinggi -->
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="timeline-content">
+                <span class="edu-level">S1 / Lulusan Sarjana</span>
+                <h4>Universitas Buana Perjuangan Karawang</h4>
+                <p class="edu-detail">Informatika / Ilmu Komputer</p>
+                <div class="gpa-badge">
+                  <i class="fa-solid fa-star"></i> IPK: <strong>3.70 / 4.00</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pendidikan 2: Sekolah Menengah -->
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="timeline-content">
+                <span class="edu-level">Sekolah Menengah Kejuruan</span>
+                <h4>SMK Nahdlatul Ulama Attarbiyyah</h4>
+                <p class="edu-detail">Teknik & Komputer / Kejuruan</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <!-- RIWAYAT PROYEK & KEGIATAN -->
-    <section id="proyek" class="projects-section">
+    <!-- Section 2: Proyek & Pengalaman -->
+    <section id="projects" class="projects-section">
       <div class="section-title-box">
-        <h2><i class="fa-solid fa-laptop-code"></i> Portofolio Proyek & Penelitian <span>(2 Proyek)</span></h2>
-        <p>Kumpulan hasil karya, analisis data, dan penelitian bidang AI / Computer Vision yang telah diselesaikan.</p>
+        <h2><i class="fa-solid fa-list-check"></i> Proyek & Pengalaman Kegiatan <span>(8 item)</span></h2>
+        <p>Berikut adalah daftar proyek, penelitian, dan pengalaman kerja yang pernah saya selesaikan.</p>
       </div>
 
       <div class="projects-list">
 
-        <!-- PROYEK 1: SKRIPSI COMPUTER VISION -->
+        <!-- Card 1 -->
         <div class="magang-card">
           <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Deteksi Penggunaan HP">
+            <img src="Pelatihan_Power_BI_Toyota.jpeg" alt="Foto Proyek 1">
           </div>
           <div class="card-content">
-            <span class="card-badge highlight-badge">SKRIPSI / RESEARCH</span>
-            <h3>Deteksi Penggunaan Ponsel Pejalan Kaki Menggunakan Faster R-CNN</h3>
-            <p>Pengembangan model Computer Vision berbasis deep learning menggunakan arsitektur Faster R-CNN untuk mendeteksi secara otomatis pejalan kaki yang menggunakan telepon genggam di area publik guna meningkatkan keselamatan lalu lintas.</p>
+            <div class="card-badge">PENGALAMAN MAGANG</div>
+            <h3>PELATIHAN DAN PENGEMBANGAN DASHBOARD ANALISIS DATA DI PT TOYOTA MOTOR MANUFACTURING INDONESIA</h3>
+            <p>Mengolah dan memvisualisasikan data operasional menjadi dashboard interaktif untuk membantu pengambilan keputusan berbasis data secara efisien.</p>
             <div class="tech-tags">
-              <span>Computer Vision</span>
-              <span>Faster R-CNN</span>
-              <span>Deep Learning</span>
-              <span>Python</span>
+              <span>Excel</span>
+              <span>Power BI</span>
+              <span>Data Viz</span>
+              <span>Toyota Learning Center</span>
             </div>
           </div>
         </div>
 
-        <!-- PROYEK 2: DASHBOARD POWER BI & EXCEL -->
+        <!-- Card 2 -->
         <div class="magang-card">
           <div class="card-media">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Power BI Dashboard">
+            <img src="Carbon_Neutral.jpeg" alt="Foto Proyek 2">
           </div>
           <div class="card-content">
-            <span class="card-badge">DATA ANALYTICS</span>
-            <h3>Interactive Data Visualization & Business Intelligence</h3>
-            <p>Perancangan dashboard analisis data interaktif menggunakan Microsoft Excel dan Power BI untuk mengolah data operasional, menampilkan ringkasan eksekutif, serta membantu pengambilan keputusan berbasis data secara cepat dan akurat.</p>
+            <div class="card-badge">PENGALAMAN MAGANG</div>
+            <h3>PELATIHAN CARBON NEUTRAL Di PT TOYOTA MOTOR MANUFACTURING INDONESIA</h3>
+            <p>Pemahaman mengenai konsep netralitas karbon, pengurangan emisi gas rumah kaca, serta penerapan prinsip keberlanjutan lingkungan pada operasional industri modern.</p>
             <div class="tech-tags">
+              <span>Carbon Neutral</span>
+              <span>Sustainability</span>
+              <span>Edukasi Lingkungan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="magang-card">
+          <div class="card-media">
+            <img src="ProgramAdministrator.jpeg" alt="Administrasi & Operasional">
+          </div>
+          <div class="card-content">
+            <div class="card-badge">PENGALAMAN MAGANG</div>
+            <h3>PROGRAM ADMINISTRATOR DI PT TOYOTA MOTOR MANUFACTURING INDONESIA</h3>
+            <p>Mengelola administrasi pencatatan training carbon neutral di Toyota Learning Center, dokumentasi alur kerja operasional, memastikan kelancaran alur Training Carbon Neutral, serta visualisasi data training menggunakan power bi.</p>
+            <div class="tech-tags">
+              <span>Administration</span>
               <span>Power BI</span>
-              <span>Microsoft Excel</span>
-              <span>Data Analysis</span>
-              <span>Data Visualization</span>
+              <span>Data Entry</span>
+              <span>Team Work</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="magang-card">
+          <div class="card-media">
+            <img src="burnoutkerja.jpeg" alt="Machine Learning">
+          </div>
+          <div class="card-content">
+            <div class="card-badge highlight-badge">PENELITIAN MACHINE LEARNING</div>
+            <h3>PREDIKSI KELELAHAN KERJA/BURNOUT MENGGUNAKAN RANDOM FOREST</h3>
+            <p>Prediksi Kelelahan Kerja Menggunakan Random Forest Berdasarkan Beban Kerja, Kelelahan, Jabatan</p>
+            <div class="tech-tags">
+              <span>Machine Learning</span>
+              <span>Data Science</span>
+              <span>Data Analyst</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="magang-card">
+          <div class="card-media">
+            <img src="DataCovid.png" alt="Covid">
+          </div>
+          <div class="card-content">
+            <div class="card-badge">PENELITIAN POWER BI</div>
+            <h3>VISUALISASI ANGKA KEMATIAN COVID 19 MENGGUNAKAN POWER BI</h3>
+            <p>Visualisasi Data Covid 19 berdasarkan kasus baru oleh tanggal, kasus baru dan kematian baru oleh tahun, serta pemetaan wilayah yang terkena covid 19</p>
+            <div class="tech-tags">
+              <span>Data Viz</span>
+              <span>Communication</span>
+              <span>Presentation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="magang-card">
+          <div class="card-media">
+            <img src="Guna_Handphone.jpeg" alt="Deep Learning">
+          </div>
+          <div class="card-content">
+            <div class="card-badge highlight-badge">PENELITIAN COMPUTER VISION DAN DEEP LEARNING</div>
+            <h3>DETEKSI PENGGUNAAN HANDPHONE PADA PEJALAN KAKI MENGGUNAKAN FASTER R-CNN</h3>
+            <p>Membangun Sistem Deteksi Penggunaan Handphone Pada Pejalan Kaki Menggunakan Faster R-CNN Guna Untuk Keselamatan Pejalan Kaki Supaya Tidak Terdistraksi Handphone Saat Berjalan</p>
+            <div class="tech-tags">
+              <span>Deep Learning</span>
+              <span>Computer Vision</span>
+              <span>Pedestrian Safety</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="magang-card">
+          <div class="card-media">
+            <img src="Minyak.png" alt="Random Forest">
+          </div>
+          <div class="card-content">
+            <div class="card-badge highlight-badge">PENELITIAN MACHINE LEARNING</div>
+            <h3>SIMULASI MACHINE LEARNING PREDIKSI HARGA MINYAK DAN GPR</h3>
+            <p>Pemodelan Random Forest untuk memprediksi fluktuasi harga minyak dunia berdasarkan analisis Geopolitical Risk Index (GPR) dan simulasi ketegangan antar negara</p>
+            <div class="tech-tags">
+              <span>Random Forest</span>
+              <span>Machine Learning</span>
+              <span>Data Analyst</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="magang-card">
+          <div class="card-media">
+            <img src="Riset_Teknologi.jpeg" alt="Pelatihan & Workshop">
+          </div>
+          <div class="card-content">
+            <div class="card-badge">HIMPUNAN TEKNIK INFORMATIKA</div>
+            <h3>ANGGOTA DEPARTMENT PENRISTEK (PENDIDIKAN RISET DAN TEKNOLOGI)</h3>
+            <p>Wadah kolaborasi dan belajar bersama untuk berdiskusi, memecahkan masalah pemrograman, serta menyelesaikan tugas-tugas teknis yang rumit atau terkendala secara efektif</p>
+            <div class="tech-tags">
+              <span>Workshop</span>
+              <span>Organization</span>
+              <span>Continuous Learning</span>
             </div>
           </div>
         </div>
@@ -161,22 +276,19 @@
       </div>
     </section>
 
-    <!-- HUBUNGI / KONTAK -->
-    <section id="kontak" class="contact-section">
+    <!-- Section 3: Kontak -->
+    <section id="contact" class="contact-section">
       <div class="contact-box">
-        <h3>Tertarik Berkolaborasi atau Mengerekrut?</h3>
-        <p>Silakan hubungi saya melalui email untuk diskusi peluang magang, kerja, atau proyek kolaborasi.</p>
-        <a href="mailto:farhanfadhillah914@gmail.com" class="btn-primary-blue">
-          <i class="fa-solid fa-paper-plane"></i> Kirim Email Saya
-        </a>
+        <h3>Mari Berkolaborasi!</h3>
+        <p>Punya proyek menarik atau peluang kerja sama? Kontak saya langsung!</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=farhanfarhan6513@gmail.com" target="_blank" class="btn-primary-blue"><i class="fa-solid fa-envelope"></i> Kirim Email Sekarang</a>
       </div>
     </section>
 
   </main>
 
-  <!-- 5. FOOTER -->
   <footer>
-    <p>&copy; 2026 Farhan Fadhillah. All rights reserved. Powered by MagangHub Theme.</p>
+    <p>&copy; 2026 Farhan Fadhillah &bull; Portofolio System Style MagangHub</p>
   </footer>
 
 </body>
