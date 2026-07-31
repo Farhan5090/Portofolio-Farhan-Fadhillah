@@ -20,7 +20,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-border-box;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -45,13 +45,13 @@ body {
   margin-right: 6px;
 }
 
-/* 3. NAVBAR CLEAN (STICKY NAVBAR REVISI) */
+/* 3. NAVBAR CLEAN (STICKY NAVBAR) */
 .navbar {
   background: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
   position: sticky; /* Tetap ikut saat di-scroll */
   top: 0;           /* Menempel di paling atas */
-  z-index: 1000;    /* Agar selalu berada di atas elemen lain */
+  z-index: 1000;    /* Selalu di atas elemen lain */
   box-shadow: var(--shadow-sm);
 }
 
@@ -200,18 +200,24 @@ body {
 .tab-item {
   padding: 14px 20px;
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--text-muted); /* Normal: warna abu-abu */
   font-weight: 600;
   font-size: 0.9rem;
   border-bottom: 3px solid transparent;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: all 0.2s ease;
 }
 
-.tab-item.active, .tab-item:hover {
+/* Hanya tab aktif yang diberi warna biru */
+.tab-item.active {
   color: var(--primary-blue);
   border-bottom-color: var(--primary-blue);
+}
+
+.tab-item:hover {
+  color: var(--primary-blue);
 }
 
 /* 6. MAIN CONTAINER & CARDS */
@@ -251,7 +257,7 @@ body {
   padding: 20px;
 }
 
-/* REVISI: Teks Rata Kanan-Kiri (Justify) */
+/* Teks Rata Kanan-Kiri (Justify) */
 .bio-text {
   font-size: 0.95rem;
   color: var(--text-dark);
@@ -336,7 +342,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* PROJECTS LIST (MAGANGHUB CARD STYLE) */
+/* PROJECTS LIST */
 .projects-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -404,7 +410,7 @@ body {
   color: var(--text-dark);
 }
 
-/* REVISI: Teks Deskripsi Kartu Rata Kanan-Kiri (Justify) */
+/* Teks Deskripsi Kartu Rata Kanan-Kiri (Justify) */
 .card-content p {
   font-size: 0.85rem;
   color: var(--text-muted);
