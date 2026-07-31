@@ -1,24 +1,504 @@
-/* 1. Supaya Navbar Tetap Ikut Saat Di-scroll (Sticky) */
+/* ==========================================
+   PORTOFOLIO HUB - MAGANGHUB STYLE
+   ========================================== */
+
+/* 1. RESET & VARIABLE CSS */
+:root {
+  --primary-blue: #0056b3;
+  --secondary-blue: #003d80;
+  --accent-blue: #e6f0fa;
+  --bg-light: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-dark: #2c3e50;
+  --text-muted: #6c757d;
+  --border-color: #e0e0e0;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* 2. ANNOUNCEMENT BAR */
+.announcement-bar {
+  background-color: #1a252f;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.announcement-bar i {
+  color: #f39c12;
+  margin-right: 6px;
+}
+
+/* 3. NAVBAR CLEAN (STICKY NAVBAR REVISI) */
 .navbar {
   background: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  position: sticky; /* Nempel di atas */
-  top: 0;
-  z-index: 1000;    /* Agar tidak tertimpa elemen lain */
+  position: sticky; /* Tetap ikut saat di-scroll */
+  top: 0;           /* Menempel di paling atas */
+  z-index: 1000;    /* Agar selalu berada di atas elemen lain */
+  box-shadow: var(--shadow-sm);
 }
 
-/* 2. Supaya Teks Bio Rata Kanan-Kiri (Justify) */
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo-main {
+  color: var(--primary-blue);
+}
+
+.logo-sub {
+  color: #2c3e50;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+  color: var(--primary-blue);
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-small {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-blue);
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* 4. PROFILE BANNER HERO */
+.profile-banner {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
+  padding: 40px 20px;
+}
+
+.banner-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.profile-email, .profile-location {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 3px;
+}
+
+.profile-action {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  transition: background 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* 5. SUB NAVIGATION TABS */
+.sub-nav-tabs {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 20px;
+}
+
+.tab-item {
+  padding: 14px 20px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-item.active, .tab-item:hover {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+}
+
+/* 6. MAIN CONTAINER & CARDS */
+.main-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card-box {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.box-header {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.box-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-body {
+  padding: 20px;
+}
+
+/* REVISI: Teks Rata Kanan-Kiri (Justify) */
 .bio-text {
   font-size: 0.95rem;
   color: var(--text-dark);
   line-height: 1.7;
-  text-align: justify; /* Rata kanan-kiri */
+  text-align: justify;
 }
 
-/* 3. Supaya Teks Deskripsi Kartu Proyek Rata Kanan-Kiri */
-.card-content p {
-  font-size: 0.9rem;
+/* TIMELINE PENDIDIKAN */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 15px;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.edu-level {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-blue);
+  letter-spacing: 0.5px;
+}
+
+.timeline-content h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin: 2px 0;
+}
+
+.edu-detail {
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 12px;
-  text-align: justify; /* Rata kanan-kiri */
+}
+
+.gpa-badge {
+  display: inline-block;
+  margin-top: 6px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* SECTION TITLE */
+.section-title-box h2 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+}
+
+.section-title-box h2 span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.section-title-box p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* PROJECTS LIST (MAGANGHUB CARD STYLE) */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.magang-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.magang-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-media {
+  width: 100%;
+  height: 180px;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--accent-blue);
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.card-badge.highlight-badge {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.card-content h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+/* REVISI: Teks Deskripsi Kartu Rata Kanan-Kiri (Justify) */
+.card-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: justify;
+  flex: 1;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tech-tags span {
+  font-size: 0.75rem;
+  background-color: #f1f3f5;
+  color: #495057;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* 7. KONTAK SECTION */
+.contact-section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.contact-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.btn-primary-blue {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-primary-blue:hover {
+  background-color: var(--secondary-blue);
+}
+
+/* 8. FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+  background: var(--card-bg);
+}
+
+/* 9. RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-action {
+    justify-content: center;
+  }
+  
+  .tabs-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
 }
