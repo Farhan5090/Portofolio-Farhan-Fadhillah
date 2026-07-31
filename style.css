@@ -1,510 +1,474 @@
 /* ==========================================
-   PORTOFOLIO HUB - MAGANGHUB STYLE
+   MAGANGHUB UI STYLE
    ========================================== */
 
-/* 1. RESET & VARIABLE CSS */
-:root {
-  --primary-blue: #0056b3;
-  --secondary-blue: #003d80;
-  --accent-blue: #e6f0fa;
-  --bg-light: #f4f6f9;
-  --card-bg: #ffffff;
-  --text-dark: #2c3e50;
-  --text-muted: #6c757d;
-  --border-color: #e0e0e0;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-  --radius: 8px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-
-body {
-  background-color: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-/* 2. ANNOUNCEMENT BAR */
-.announcement-bar {
-  background-color: #1a252f;
-  color: #ffffff;
-  text-align: center;
-  padding: 8px 15px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.announcement-bar i {
-  color: #f39c12;
-  margin-right: 6px;
-}
-
-/* 3. NAVBAR CLEAN (STICKY NAVBAR) */
-.navbar {
-  background: var(--card-bg);
-  border-bottom: 1px solid var(--border-color);
-  position: sticky; /* Tetap ikut saat di-scroll */
-  top: 0;           /* Menempel di paling atas */
-  z-index: 1000;    /* Selalu di atas elemen lain */
-  box-shadow: var(--shadow-sm);
-}
-
-.nav-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.logo-main {
-  color: var(--primary-blue);
-}
-
-.logo-sub {
-  color: #2c3e50;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-.nav-menu a:hover, .nav-menu a.active {
-  color: var(--primary-blue);
-}
-
-.nav-user {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.avatar-small {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-blue);
-}
-
-.user-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-/* 4. PROFILE BANNER HERO */
-.profile-banner {
-  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-  color: white;
-  padding: 40px 20px;
-}
-
-.banner-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.profile-avatar-wrapper {
-  position: relative;
-}
-
-.profile-avatar {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ffffff;
-  box-shadow: var(--shadow-md);
-}
-
-.profile-info {
-  flex: 1;
-}
-
-.profile-info h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-  letter-spacing: 0.5px;
-}
-
-.profile-email, .profile-location {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  margin-bottom: 3px;
-}
-
-.profile-action {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-edit {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  backdrop-filter: blur(5px);
-  transition: background 0.2s;
-}
-
-.btn-edit:hover {
-  background-color: rgba(255, 255, 255, 0.35);
-}
-
-/* 5. SUB NAVIGATION TABS */
-.sub-nav-tabs {
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.tabs-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  padding: 0 20px;
-}
-
-.tab-item {
-  padding: 14px 20px;
-  text-decoration: none;
-  color: var(--text-muted); /* Normal: warna abu-abu */
-  font-weight: 600;
-  font-size: 0.9rem;
-  border-bottom: 3px solid transparent;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
-}
-
-/* Hanya tab aktif yang diberi warna biru */
-.tab-item.active {
-  color: var(--primary-blue);
-  border-bottom-color: var(--primary-blue);
-}
-
-.tab-item:hover {
-  color: var(--primary-blue);
-}
-
-/* 6. MAIN CONTAINER & CARDS */
-.main-container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.info-card-box {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.box-header {
-  background-color: #f8f9fa;
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.box-header h3 {
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.box-body {
-  padding: 20px;
-}
-
-/* Teks Rata Kanan-Kiri (Justify) */
-.bio-text {
-  font-size: 0.95rem;
-  color: var(--text-dark);
-  line-height: 1.7;
-  text-align: justify;
-}
-
-/* TIMELINE PENDIDIKAN */
-.timeline-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.timeline-item {
-  display: flex;
-  gap: 15px;
-}
-
-.timeline-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--accent-blue);
-  color: var(--primary-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-.timeline-content {
-  flex: 1;
-}
-
-.edu-level {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary-blue);
-  letter-spacing: 0.5px;
-}
-
-.timeline-content h4 {
-  font-size: 1rem;
-  color: var(--text-dark);
-  margin: 2px 0;
-}
-
-.edu-detail {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.gpa-badge {
-  display: inline-block;
-  margin-top: 6px;
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  font-size: 0.8rem;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-/* SECTION TITLE */
-.section-title-box h2 {
-  font-size: 1.3rem;
-  color: var(--text-dark);
-}
-
-.section-title-box h2 span {
-  font-size: 1rem;
-  color: var(--text-muted);
-  font-weight: normal;
-}
-
-.section-title-box p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-/* PROJECTS LIST */
-.projects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 20px;
-}
-
-.magang-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-}
-
-.magang-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.card-media {
-  width: 100%;
-  height: 180px;
-  background-color: #eee;
-  overflow: hidden;
-}
-
-.card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.card-badge {
-  align-self: flex-start;
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
-  background-color: var(--accent-blue);
-  color: var(--primary-blue);
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-
-.card-badge.highlight-badge {
-  background-color: #fff3cd;
-  color: #856404;
-}
-
-.card-content h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 8px;
-  color: var(--text-dark);
-}
-
-/* Teks Deskripsi Kartu Rata Kanan-Kiri (Justify) */
-.card-content p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 15px;
-  line-height: 1.5;
-  text-align: justify;
-  flex: 1;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: auto;
-}
-
-.tech-tags span {
-  font-size: 0.75rem;
-  background-color: #f1f3f5;
-  color: #495057;
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-
-/* 7. KONTAK SECTION */
-.contact-section {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-  padding: 30px;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-
-.contact-box h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.contact-box p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-.btn-primary-blue {
-  display: inline-block;
-  background-color: var(--primary-blue);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background 0.2s;
-}
-
-.btn-primary-blue:hover {
-  background-color: var(--secondary-blue);
-}
-
-/* 8. FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  border-top: 1px solid var(--border-color);
-  margin-top: 40px;
-  background: var(--card-bg);
-}
-
-/* 9. RESPONSIVE DESIGN FOR MOBILE */
-@media (max-width: 768px) {
+   :root {
+    --primary-blue: #0d47a1;
+    --secondary-blue: #1565c0;
+    --light-blue: #e3f2fd;
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --accent-badge: #dbeafe;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  /* 1. TOP ANNOUNCEMENT BAR */
+  .announcement-bar {
+    background-color: #0c2340;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  /* 2. NAVBAR CLEAN */
+  .navbar {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
   .nav-container {
-    flex-direction: column;
-    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  
+  .logo-main { color: var(--primary-blue); }
+  .logo-sub { color: #000; }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0 15px;
+    transition: color 0.2s;
+  }
+  
+  .nav-menu a:hover, .nav-menu a.active {
+    color: var(--primary-blue);
+    font-weight: 600;
+  }
+  
+  .nav-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  
+  .avatar-small {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .user-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  /* 3. BLUE PROFILE BANNER */
+  .profile-banner {
+    background: linear-gradient(135deg, #0d3b66 0%, #0d47a1 100%);
+    color: white;
+    padding: 40px 24px;
   }
   
   .banner-container {
-    flex-direction: column;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .profile-avatar-wrapper {
+    position: relative;
+  }
+  
+  .profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    object-position: top; /* Memastikan bagian kepala & rambut kelihatan */
+  }
+  
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  .profile-info h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  
+  .profile-email, .profile-location {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 4px;
   }
   
   .profile-action {
-    justify-content: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-edit {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .btn-edit:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-linkedin {
+    background-color: #0a66c2 !important;
+    border-color: #0a66c2 !important;
+  }
+  
+  .btn-linkedin:hover {
+    background-color: #084e96 !important;
+  }
+  
+  /* 4. SUB NAVIGATION TABS */
+  .sub-nav-tabs {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
   }
   
   .tabs-container {
-    overflow-x: auto;
-    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .tab-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 8px;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .tab-item.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+  }
+  
+  /* 5. MAIN CONTAINER & SECTIONS */
+  .main-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 24px;
+  }
+  
+  /* ABOUT & EDUCATION SECTION */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .info-card-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  
+  .box-header {
+    background: #f8fafc;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .box-header h3 {
+    font-size: 1.05rem;
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .box-body {
+    padding: 20px;
+  }
+  
+  .bio-text {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+  
+  .timeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .timeline-icon {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    margin-top: 2px;
+  }
+  
+  .edu-level {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .edu-detail {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  
+  .gpa-badge {
+    display: inline-block;
+    margin-top: 8px;
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+    font-size: 0.82rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  
+  /* PROJECTS SECTION */
+  .section-title-box {
+    margin-bottom: 24px;
+  }
+  
+  .section-title-box h2 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+  }
+  
+  .section-title-box h2 span {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  
+  .section-title-box p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 4px;
   }
   
   .projects-list {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-}
+  
+  .magang-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .magang-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-media img {
+    width: 160px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    flex-grow: 1;
+  }
+  
+  .card-badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: var(--primary-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .highlight-badge {
+    background-color: #fef3c7;
+    color: #b45309;
+  }
+  
+  .card-content h3 {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  .card-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  
+  .tech-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .tech-tags span {
+    font-size: 0.75rem;
+    background: #f1f5f9;
+    color: #334155;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  
+  /* CONTACT SECTION */
+  .contact-section {
+    margin-top: 40px;
+  }
+  
+  .contact-box {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .contact-box h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .contact-box p { color: var(--text-muted); margin-bottom: 18px; }
+  
+  .btn-primary-blue {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .btn-primary-blue:hover {
+    background-color: var(--secondary-blue);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    background: white;
+    margin-top: 40px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .banner-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-action {
+      justify-content: center;
+    }
+    .magang-card {
+      flex-direction: column;
+    }
+    .card-media img {
+      width: 100%;
+      height: 180px;
+    }
+    .nav-menu { display: none; }
+  }
