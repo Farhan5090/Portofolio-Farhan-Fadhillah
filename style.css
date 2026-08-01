@@ -1,5 +1,5 @@
 /* ==========================================
-   MAGANGHUB UI STYLE - CLEAN & NORMAL TABS
+   MAGANGHUB UI STYLE - COMPLETE SYSTEM
    ========================================== */
 
 :root {
@@ -192,7 +192,7 @@ section {
   background-color: #084e96 !important;
 }
 
-/* 4. SUB NAVIGATION TABS - WARNA NETRAL */
+/* 4. SUB NAVIGATION TABS */
 .sub-nav-tabs {
   background: white;
   border-bottom: 1px solid var(--border-color);
@@ -436,6 +436,109 @@ section {
   font-weight: 500;
 }
 
+/* CERTIFICATES SECTION WITH MEDIA */
+.certificates-section {
+  margin-bottom: 40px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-card-with-media {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card-with-media:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.cert-media {
+  width: 100%;
+  height: 180px;
+  background-color: #f1f5f9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cert-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.cert-card-with-media:hover .cert-media img {
+  transform: scale(1.03);
+}
+
+.cert-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cert-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  background-color: #eff6ff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.cert-content h3 {
+  font-size: 0.98rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.cert-issuer, .cert-date {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.cert-actions {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.btn-cert-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #dc2626;
+  background-color: #fef2f2;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid #fecaca;
+  transition: background 0.2s;
+}
+
+.btn-cert-view:hover {
+  background-color: #fee2e2;
+}
+
 /* CONTACT SECTION */
 .contact-section {
   margin-top: 40px;
@@ -480,7 +583,7 @@ footer {
   margin-top: 40px;
 }
 
-/* RESPONSIVE DESIGN (TAMPILAN HP) */
+/* RESPONSIVE DESIGN (HP) */
 @media (max-width: 768px) {
   .nav-container {
     padding: 10px 16px;
